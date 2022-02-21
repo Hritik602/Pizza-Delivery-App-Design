@@ -43,7 +43,29 @@ class ItemDetailPage extends StatelessWidget {
                         text:
                             "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.",
                         fontSize: 19,
-                        textAlign: TextAlign.start)
+                        textAlign: TextAlign.start),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      children: List.generate(3, (index) {
+                        return Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Column(
+                            children: const [
+                              CircleAvatar(
+                                backgroundColor: Colors.grey,
+                                child: Icon(
+                                  Icons.person,
+                                  color: Colors.black54,
+                                ),
+                              ),
+                              Text("Person"),
+                            ],
+                          ),
+                        );
+                      }),
+                    )
                   ],
                 ),
               ),
@@ -67,7 +89,7 @@ class ItemName extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         CustomText(
-          text: "Omlet, Broccoli\nGreen Salad",
+          text: "Omelet ,Broccoli",
           fontWeight: FontWeight.w600,
           fontSize: 27,
           textAlign: TextAlign.center,
@@ -80,10 +102,16 @@ class ItemName extends StatelessWidget {
               Icons.remove_circle,
               size: 22,
             ),
+            const SizedBox(
+              width: 5.0,
+            ),
             CustomText(text: "1", fontSize: 19, textAlign: TextAlign.start),
+            const SizedBox(
+              width: 5.0,
+            ),
             const Icon(
               Icons.add_circle,
-              size: 19,
+              size: 22,
             )
           ],
         )
@@ -132,17 +160,17 @@ class BottomPriceDetail extends StatelessWidget {
         children: [
           CustomText(
             text: "Total Payable",
-            fontSize: 20,
+            fontSize: 14,
             color: Colors.white,
             textAlign: TextAlign.start,
             fontWeight: FontWeight.w600,
           ),
           CustomText(
             text: "\$18.00",
-            fontSize: 22,
+            fontSize: 20,
             color: Colors.white,
             textAlign: TextAlign.start,
-            fontWeight: FontWeight.w600,
+            fontWeight: FontWeight.w700,
           )
         ],
       ),

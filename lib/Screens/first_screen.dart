@@ -40,13 +40,13 @@ class FirstScreen extends StatelessWidget {
               ),
               const HeadingText(),
               const DescriptionText(),
-              const Divider(
-                indent: 143,
-                endIndent: 166,
-                height: 6.1,
-                thickness: 5.0,
-                color: Colors.white,
-              ),
+              // const Divider(
+              //   indent: 143,
+              //   endIndent: 166,
+              //   height: 6.1,
+              //   thickness: 5.0,
+              //   color: Colors.white,
+              // ),
               const SizedBox(
                 height: 10,
               ),
@@ -108,6 +108,7 @@ class DescriptionText extends StatelessWidget {
         height: 87,
         color: Colors.transparent,
         child: CustomText(
+          color: Colors.white,
           textAlign: TextAlign.center,
           fontSize: 16,
           text:
@@ -137,11 +138,13 @@ class HeadingText extends StatelessWidget {
               text: "Life is so",
               fontSize: 30,
               textAlign: TextAlign.center,
+              color: Colors.white,
             ),
             CustomText(
               text: "endlessly delicious",
               fontSize: 30,
               textAlign: TextAlign.center,
+              color: Colors.white,
             ),
           ],
         ),

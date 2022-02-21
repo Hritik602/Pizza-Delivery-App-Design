@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: const Color.fromRGBO(46, 51, 71, 1.0),
-        bottomNavigationBar: CustomBottomNavigationBar(),
+        bottomNavigationBar: const CustomBottomNavigationBar(),
         body: SafeArea(
           child: Stack(
             children: [
@@ -42,21 +42,24 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       const AppBarIcon(),
                       const SizedBox(
-                        height: 20,
+                        height: 10,
                       ),
                       CustomText(
-                        text: "Lets Try",
-                        fontSize: 35,
+                        text: "Let's Try",
+                        fontSize: 22,
                         textAlign: TextAlign.start,
-                        fontWeight: FontWeight.w600,
+                        fontWeight: FontWeight.w900,
                       ),
                       CustomText(
                         text: "some tasty food !",
-                        fontSize: 35,
+                        fontSize: 22,
                         textAlign: TextAlign.start,
-                        fontWeight: FontWeight.w600,
+                        fontWeight: FontWeight.w900,
                       ),
                       const RowTextField(),
+                      const SizedBox(
+                        height: 10,
+                      ),
                       Container(
                           constraints: const BoxConstraints(
                             maxHeight: 120,
@@ -95,7 +98,7 @@ class _HomePageState extends State<HomePage> {
                       const Padding(
                         padding: EdgeInsets.all(8.0),
                         child: CustomCard(
-                          text: "Green Vegitable",
+                          text: "Green Vegetable",
                           assetName: 'asset/greensalad.png',
                         ),
                       )
@@ -133,7 +136,7 @@ class CustomCard extends StatelessWidget {
             boxShadow: const [
               BoxShadow(
                 color: Colors.black45,
-                blurRadius: 2.0,
+                blurRadius: 1.0,
                 spreadRadius: 1.0,
                 offset: Offset(2.0, 2.0),
               ),
@@ -145,12 +148,12 @@ class CustomCard extends StatelessWidget {
               CustomText(
                   text: text,
                   fontSize: 19,
-                  fontWeight: FontWeight.w900,
+                  fontWeight: FontWeight.w700,
                   textAlign: TextAlign.start),
               CustomText(
                   text: "Lorem ipsum is a placeholder text commonly used to ",
                   fontSize: 16,
-                  fontWeight: FontWeight.w600,
+                  fontWeight: FontWeight.w500,
                   textAlign: TextAlign.start),
               const SizedBox(
                 height: 10,
@@ -203,8 +206,8 @@ class Weeks extends StatelessWidget {
         decoration: BoxDecoration(
             boxShadow: const [
               BoxShadow(
-                color: Colors.black,
-                blurRadius: 2.0,
+                color: Colors.black12,
+                blurRadius: 1.0,
                 spreadRadius: 1.0,
                 offset: Offset(2.0, 2.0),
               ),
@@ -226,19 +229,23 @@ class Weeks extends StatelessWidget {
               fontSize: 11,
               textAlign: TextAlign.center,
               fontWeight: FontWeight.w600,
+              color: currentIndex == listIndex ? Colors.white : Colors.black,
             ),
             CustomText(
                 text: daysNum[listIndex].toString(),
                 fontSize: 22,
                 fontWeight: FontWeight.w600,
+                color: currentIndex == listIndex ? Colors.white : Colors.black,
                 textAlign: TextAlign.center),
             const SizedBox(
               height: 5,
             ),
             currentIndex == listIndex
-                ? const Icon(
+                ? Icon(
                     Icons.arrow_drop_down_sharp,
                     size: 28,
+                    color:
+                        currentIndex == listIndex ? Colors.white : Colors.black,
                   )
                 : Text(""),
           ],
@@ -264,7 +271,7 @@ class RowTextField extends StatelessWidget {
                 constraints: BoxConstraints(maxWidth: 280, maxHeight: 50),
                 prefixIcon: Icon(
                   Icons.search,
-                  size: 29,
+                  size: 25,
                   color: Color.fromRGBO(124, 124, 124, 1),
                 ),
                 filled: true,
@@ -273,7 +280,7 @@ class RowTextField extends StatelessWidget {
           ),
         ),
         Icon(
-          Icons.menu,
+          Icons.apps,
           size: 31,
           color: Colors.black87,
         )
@@ -293,12 +300,14 @@ class AppBarIcon extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: const [
         Icon(
-          Icons.margin,
+          Icons.apps,
+          color: Colors.black54,
           size: 29,
         ),
         Icon(
           Icons.notifications_active,
           size: 29,
+          color: Colors.black54,
         )
       ],
     );

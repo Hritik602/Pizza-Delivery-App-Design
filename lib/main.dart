@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pizza_delivery_app_design/Screens/first_screen.dart';
+import 'package:pizza_delivery_app_design/Screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,6 +17,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const FirstScreen());
+        home: HomePage());
   }
 }
